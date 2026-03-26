@@ -43,7 +43,7 @@ const Hero = () => {
                             Contact Me
                         </Link>
                         <a
-                            href="/resume.pdf"
+                            href={`${import.meta.env.BASE_URL}resume.pdf`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto px-8 py-3 rounded-full border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2"
@@ -63,7 +63,7 @@ const Hero = () => {
                     <div className="relative w-64 h-64 md:w-80 md:h-80 xl:w-96 xl:h-96">
                         <div className="absolute inset-0 bg-gradient-to-tr from-primary-blue to-primary-purple rounded-[2rem] rotate-6 opacity-70"></div>
                         <div className="absolute inset-0 bg-slate-900 rounded-[2rem] overflow-hidden flex items-center justify-center -rotate-3 transition-transform hover:rotate-0 duration-300 shadow-xl">
-                            <img src="/avatar.jpg" alt="Daraniedaran avatar" className="w-full h-full object-cover scale-105" />
+                            <img src={`${import.meta.env.BASE_URL}avatar.jpg`} alt="Daraniedaran avatar" className="w-full h-full object-cover scale-105" />
                         </div>
                     </div>
                 </motion.div>
