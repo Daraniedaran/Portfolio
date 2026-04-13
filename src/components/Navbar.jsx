@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = ({ toggleTheme, isDarkMode }) => {
@@ -52,16 +52,10 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
                                 {link.name}
                             </Link>
                         ))}
-                        <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
-                            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-                        </button>
                     </div>
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center space-x-4">
-                        <button onClick={toggleTheme} className="p-2">
-                            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-                        </button>
                         <button onClick={() => setIsOpen(!isOpen)} className="p-2">
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>

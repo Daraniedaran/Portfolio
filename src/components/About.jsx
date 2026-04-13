@@ -4,7 +4,7 @@ import { Code, Brain, Cpu, Lightbulb } from 'lucide-react';
 
 const About = () => {
     return (
-        <section id="about" className="py-20 bg-slate-100 dark:bg-dark-bg/50">
+        <section id="about" className="py-20 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -37,10 +37,10 @@ const About = () => {
 
                     <div className="grid grid-cols-2 gap-4">
                         {[
-                            { icon: <Code size={24} />, title: "Full-Stack", desc: "End-to-end web apps" },
-                            { icon: <Cpu size={24} />, title: "DevOps", desc: "Automated workflows" },
-                            { icon: <Brain size={24} />, title: "AI Integration", desc: "Smart applications" },
-                            { icon: <Lightbulb size={24} />, title: "Problem Solving", desc: "Practical solutions" }
+                            { icon: <Code size={24} />, title: "Full-Stack", desc: "End-to-end web apps", gradient: "from-primary-blue to-primary-purple" },
+                            { icon: <Cpu size={24} />, title: "DevOps", desc: "Automated workflows", gradient: "from-sky-500 to-cyan-500" },
+                            { icon: <Brain size={24} />, title: "AI Integration", desc: "Smart applications", gradient: "from-violet-500 to-purple-600" },
+                            { icon: <Lightbulb size={24} />, title: "Problem Solving", desc: "Practical solutions", gradient: "from-amber-500 to-orange-500" }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -48,13 +48,14 @@ const About = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                                className="bg-white dark:bg-dark-card p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow"
+                                whileHover={{ y: -6, scale: 1.03 }}
+                                className="bg-white dark:bg-dark-card p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl hover:border-primary-blue/30 dark:hover:border-primary-purple/40 transition-all duration-300 cursor-default group"
                             >
-                                <div className="text-primary-blue dark:text-primary-purple mb-4">
+                                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${item.gradient} text-white mb-4 shadow-md group-hover:scale-110 transition-transform duration-300`}>
                                     {item.icon}
                                 </div>
-                                <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{item.title}</h3>
-                                <p className="text-sm text-slate-500">{item.desc}</p>
+                                <h3 className="font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary-blue dark:group-hover:text-primary-purple transition-colors duration-300">{item.title}</h3>
+                                <p className="text-sm text-slate-500 dark:text-slate-400">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>

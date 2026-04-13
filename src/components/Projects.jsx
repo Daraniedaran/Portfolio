@@ -39,7 +39,7 @@ const projectsData = [
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-20 bg-slate-100 dark:bg-dark-bg/50">
+        <section id="projects" className="py-20 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -60,10 +60,14 @@ const Projects = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            className="bg-white dark:bg-dark-card rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group"
+                            whileHover={{ y: -8 }}
+                            className="bg-white dark:bg-dark-card rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:border-primary-blue/30 dark:hover:border-primary-purple/40 transition-all duration-300 group relative overflow-hidden"
                         >
+                            {/* Gradient glow strip on top on hover */}
+                            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary-blue to-primary-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-t-2xl" />
+
                             <div className="flex justify-between items-start mb-6">
-                                <div className="p-3 bg-slate-50 dark:bg-slate-900 rounded-xl">
+                                <div className="p-3 bg-slate-50 dark:bg-slate-900 rounded-xl group-hover:bg-primary-blue/10 dark:group-hover:bg-primary-blue/20 group-hover:scale-110 transition-all duration-300">
                                     {project.icon}
                                 </div>
                                 <div className="flex space-x-3">
@@ -76,7 +80,7 @@ const Projects = () => {
                                 </div>
                             </div>
 
-                            <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-3 group-hover:text-primary-blue transition-colors">
+                            <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-3 group-hover:text-primary-blue dark:group-hover:text-primary-purple transition-colors duration-300">
                                 {project.title}
                             </h3>
                             <p className="text-slate-600 dark:text-slate-400 mb-6 line-clamp-3">
@@ -87,7 +91,7 @@ const Projects = () => {
                                 {project.tech.map((tech, techIdx) => (
                                     <span
                                         key={techIdx}
-                                        className="px-3 py-1 text-xs font-medium bg-primary-blue/10 text-primary-blue dark:bg-primary-blue/20 dark:text-primary-blue rounded-full"
+                                        className="px-3 py-1 text-xs font-medium bg-primary-blue/10 text-primary-blue dark:bg-primary-blue/20 dark:text-primary-blue rounded-full group-hover:bg-primary-blue group-hover:text-white dark:group-hover:bg-primary-purple dark:group-hover:text-white transition-all duration-300"
                                     >
                                         {tech}
                                     </span>

@@ -8,6 +8,7 @@ import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AuroraBackground from './components/ui/animated-background';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -23,7 +24,7 @@ function App() {
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-dark-bg text-slate-900 dark:text-slate-50 font-sans transition-colors duration-300">
+    <AuroraBackground className="font-sans transition-colors duration-300 text-slate-900 dark:text-slate-50 min-h-screen">
       <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <main>
         <Hero />
@@ -35,7 +36,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </div>
+    </AuroraBackground>
   );
 }
 

@@ -36,7 +36,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-slate-900 border-t border-slate-800 relative mt-20 pt-16 pb-8">
+        <footer className="border-t border-slate-800/50 relative mt-20 pt-16 pb-8 bg-transparent">
             {/* Animated top border gradient */}
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary-blue to-transparent opacity-50" />
             

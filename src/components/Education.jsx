@@ -34,7 +34,7 @@ const allocEducations = [
 
 const Education = () => {
     return (
-        <section id="education" className="py-20 bg-white dark:bg-dark-bg">
+        <section id="education" className="py-20 relative">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -55,22 +55,25 @@ const Education = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
-                            className={`relative md:flex items-center justify-between ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                            className={`relative md:flex items-center justify-between ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} group`}
                         >
                             <div className="hidden md:block w-5/12"></div>
 
-                            {/* Timeline dot */}
-                            <div className="absolute left-[-29px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-primary-blue to-primary-purple shadow-lg shadow-primary-blue/30 z-10">
+                            {/* Timeline dot - pulses on group hover */}
+                            <div className="absolute left-[-29px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-primary-blue to-primary-purple shadow-lg shadow-primary-blue/30 z-10 group-hover:scale-110 group-hover:shadow-primary-blue/50 transition-all duration-300">
                                 {item.icon}
                             </div>
 
                             <div className="ml-12 md:ml-0 md:w-5/12 pl-4 md:pl-0">
-                                <div className={`bg-slate-50 dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow ${index % 2 !== 0 ? 'md:text-right' : 'md:text-left'}`}>
+                                <motion.div
+                                    whileHover={{ y: -5 }}
+                                    className={`bg-slate-50 dark:bg-dark-card p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-primary-blue/30 dark:hover:border-primary-purple/40 transition-all duration-300 ${index % 2 !== 0 ? 'md:text-right' : 'md:text-left'}`}
+                                >
                                     <span className="inline-flex items-center space-x-2 text-sm text-primary-blue dark:text-primary-purple font-medium mb-2">
                                         <Calendar size={16} />
                                         <span>{item.date}</span>
                                     </span>
-                                    <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-1">{item.title}</h3>
+                                    <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-1 group-hover:text-primary-blue dark:group-hover:text-primary-purple transition-colors duration-300">{item.title}</h3>
                                     <h4 className="text-md text-slate-500 font-medium mb-2">{item.institution}</h4>
                                     {item.score && (
                                         <div className="inline-block px-3 py-1 bg-primary-blue/10 dark:bg-primary-blue/20 text-primary-blue font-semibold rounded-full text-xs mb-3">
@@ -80,7 +83,7 @@ const Education = () => {
                                     <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                                         {item.description}
                                     </p>
-                                </div>
+                                </motion.div>
                             </div>
                         </motion.div>
                     ))}
