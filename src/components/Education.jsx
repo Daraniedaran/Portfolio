@@ -7,27 +7,27 @@ const allocEducations = [
         type: 'degree',
         title: 'B.Tech in Information Technology',
         institution: 'Mailam Engineering College',
-        date: '2026 - Pre-Final Year',
-        score: 'CGPA: 8.4 (Till 5th sem)',
-        description: 'Specializing in Artificial Intelligence and Machine Learning. Consistently achieved high academic standing while working on various technical projects.',
+        date: '2023 – 2027',
+        score: 'CGPA: 8.47',
+        description: 'Final-year student specializing in Information Technology with a strong interest in Full Stack Development, AI-powered applications, and problem-solving.',
         icon: <BookOpen size={24} className="text-white" />
     },
     {
         type: 'hsc',
         title: 'HSC (Higher Secondary Certificate)',
-        institution: "St.Joseph's Higher Secondary School",
-        date: '2022 - 2023',
-        score: 'Percentage: 82.1',
-        description: 'Completed higher secondary education with excellent academic performance.',
+        institution: "St. Joseph's Higher Secondary School",
+        date: '2022 – 2023',
+        score: 'Percentage: 82%',
+        description: 'Completed higher secondary education with distinction.',
         icon: <BookOpen size={24} className="text-white" />
     },
     {
         type: 'sslc',
         title: 'SSLC (Secondary School Leaving Certificate)',
-        institution: "St.Joseph's Higher Secondary School",
-        date: '2020 - 2021',
-        score: 'Percentage: All pass',
-        description: 'Completed secondary education with excellent academic performance.',
+        institution: "St. Joseph's Higher Secondary School",
+        date: '2020 – 2021',
+        score: 'Result: Pass',
+        description: 'Completed secondary school leaving certificate.',
         icon: <BookOpen size={24} className="text-white" />
     }
 ];

@@ -25,13 +25,13 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
-                            I am a passionate <strong className="text-primary-blue dark:text-primary-purple">B.Tech Information Technology student</strong> currently in my third year, with a strong foundation in <strong className="text-primary-blue dark:text-primary-purple">Python Programming</strong> and <strong className="text-primary-blue dark:text-primary-purple">full-stack web development</strong> and also a <strong className="text-primary-blue dark:text-primary-purple">DevOps</strong> learner. I enjoy building real-world applications that are not only functional but also scalable and user-friendly.
+                            I am an <strong className="text-primary-blue dark:text-primary-purple">Aspiring Full Stack Developer</strong> with hands-on experience in building responsive web applications using modern web technologies. Currently a final-year <strong className="text-primary-blue dark:text-primary-purple">B.Tech Information Technology</strong> student at Mailam Engineering College with a CGPA of 8.47.
                         </p>
                         <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
-                            With hands-on experience in both frontend and backend technologies, I can take an idea from concept to deployment. My interest in DevOps allows me to understand modern development workflows, including automation, continuous integration, and cloud-based deployment.
-                        </p>    
+                            I have a strong interest in <strong className="text-primary-blue dark:text-primary-purple">Python Programming</strong> and <strong className="text-primary-blue dark:text-primary-purple">Full Stack Development</strong> and also a <strong className="text-primary-blue dark:text-primary-purple">DevOps </strong>learner. I enjoy building real-world applications that not only functional but also scalable and user-friendly.
+                        </p>
                         <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                            I am a quick learner, a problem solver, and someone who enjoys turning ideas into practical solutions. I am currently looking for opportunities to apply my skills, collaborate on exciting projects, and grow as a software engineer.
+                            I am a quick learner, adaptable team player, and creative problem solver looking for opportunities to contribute, collaborate on innovative projects, and grow as a software engineer.
                         </p>
                     </motion.div>
 

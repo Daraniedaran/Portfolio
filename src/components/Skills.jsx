@@ -5,17 +5,22 @@ const skillCategories = [
     {
         title: "Programming",
         emoji: "⚡",
-        skills: ["Python", "Java", "JavaScript"]
+        skills: ["Python","Java"]
     },
     {
-        title: "Web Technologies",
+        title: "Frontend",
         emoji: "🌐",
-        skills: ["HTML & CSS", "React", "Tailwind CSS"]
+        skills: ["HTML", "CSS", "JavaScript", "React.js"]
     },
     {
-        title: "Tools & Others",
+        title: "Backend & Database",
+        emoji: "⚙️",
+        skills: ["FastAPI", "MySQL", "Firebase"]
+    },
+    {
+        title: "Tools & Platforms",
         emoji: "🛠️",
-        skills: ["Git", "Firebase", "Figma"]
+        skills: ["Git", "GitHub", "Microsoft 365", "Figma"]
     }
 ];
 
@@ -34,7 +39,7 @@ const Skills = () => {
                     <div className="w-24 h-1 bg-gradient-to-r from-primary-blue to-primary-purple mx-auto rounded-full"></div>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {skillCategories.map((category, idx) => (
                         <motion.div
                             key={idx}

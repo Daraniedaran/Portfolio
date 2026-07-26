@@ -4,41 +4,59 @@ import { Award, Calendar, Trophy, Briefcase, Code2 } from 'lucide-react';
 
 const certifications = [
     {
+        title: 'IT Specialist – Python',
+        institution: 'Certiport / Pearson VUE (CertNexus)',
+        date: 'Oct 2024',
+        description: 'Information Technology Specialist Certification in Python, validating strong core programming capabilities.',
+        type: 'Certification',
+        gradient: 'from-sky-500 to-blue-600',
+        icon: <Code2 size={24} className="text-white" />
+    },
+    {
+        title: 'Full Stack Development',
+        institution: 'NoviTech R&D Private Limited',
+        date: 'Aug 2025',
+        description: 'Comprehensive Full Stack Development program gaining hands-on web application development skills.',
+        type: 'Training',
+        gradient: 'from-primary-blue to-primary-purple',
+        icon: <Award size={24} className="text-white" />
+    },
+    {
         title: 'Code 4 Change 2026 – Hackathon',
         institution: 'Karpaga Vinayaga College of Engineering & Technology',
-        date: 'February 13 – 14, 2026',
-        description: 'Certificate of Participation in the First National Level 24-Hours Hackathon organized by the Departments of Computer Science and Engineering (CSE), Artificial Intelligence and Data Science (ADS), and Computer Applications (MCA). Sponsored by Zuntra & exi, in association with CSI Region 7 Chapters.',
+        date: 'Feb 2026',
+        description: 'National level hackathon participation developing innovative solutions under tight time constraints.',
         type: 'Hackathon',
         gradient: 'from-amber-500 to-orange-500',
         icon: <Trophy size={24} className="text-white" />
     },
     {
-        title: 'Full Stack Development',
-        institution: 'NoviTech R&D Private Limited',
-        date: 'July 23 – August 26, 2025',
-        description: 'Certificate of Completion (ID: NT_B43FSD67) for a 30 Days MasterClass in Full Stack Development, conducted by NoviTech R&D Private Limited (ISO 9001:2015 Certified). Issued by Mr. S. Bharani Chandar (Software Developer) and Mr. A. Vinothkumar (Director), NoviTech R&D Pvt. Ltd., Coimbatore.',
-        type: 'Internship',
-        gradient: 'from-primary-blue to-primary-purple',
-        icon: <Award size={24} className="text-white" />
+        title: 'The Joy of Computing using Python',
+        institution: 'NPTEL | Elite (67%)',
+        date: 'Apr 2026',
+        description: 'Completed NPTEL certification with Elite grade status in Python programming concepts.',
+        type: 'Certification',
+        gradient: 'from-purple-500 to-indigo-600',
+        icon: <Code2 size={24} className="text-white" />
     },
     {
         title: 'UI/UX Design Internship',
         institution: 'Scode Software Solutions',
-        date: 'December 24 – 31, 2024',
-        description: 'Certificate of Completion for a UI/UX Design internship with a "Good" performance rating. Issued by Tyson Vignesh V (Founder & Managing Director) and Catherine Sangeetha A (Co-Founder & HR Manager) of Scode Software Solutions.',
+        date: 'Dec 24, 2024 – Dec 31, 2024',
+        description: 'Completed a UI/UX Design internship, gaining hands-on experience in user interface design, user experience principles, wireframing, and mobile app design.',
         type: 'Internship',
         gradient: 'from-emerald-500 to-teal-500',
         icon: <Briefcase size={24} className="text-white" />
     },
     {
-        title: 'IT Specialist – Python',
-        institution: 'Certiport / Pearson VUE (CertNexus)',
-        date: 'October 3, 2024',
-        description: 'Information Technology Specialist Certification for Python, awarded by Dr. Gary A. Gates (Managing Director, Pearson VUE). Credential ID: wbRJJ-FaSQ. Verifiable at verify.certiport.com.',
-        type: 'Certification',
-        gradient: 'from-sky-500 to-blue-600',
-        icon: <Code2 size={24} className="text-white" />
-    },
+        title: 'Volunteer – HackIndia 2026 Spark-3',
+        institution: 'Department of IT, Mailam Engineering College',
+        date: '2026',
+        description: 'Volunteered for the HackIndia 2026 Spark-3 event facilitating event execution and tech support.',
+        type: 'Volunteer',
+        gradient: 'from-violet-500 to-purple-600',
+        icon: <Award size={24} className="text-white" />
+    }
 ];
 
 const Certifications = () => {
